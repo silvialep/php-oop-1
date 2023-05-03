@@ -35,12 +35,12 @@ require_once './db.php';
         <table class="table">
             <thead>
                 <tr>
-                    <th>Titolo</th>
-                    <th>Anno</th>
-                    <th>Generi</th>
-                    <th>Regista</th>
-                    <th>Attori principali</th>
-                    <th>Is Millennial?</th>
+                    <th class="fs-4">Titolo</th>
+                    <th class="fs-4">Anno</th>
+                    <th class="fs-4">Generi</th>
+                    <th class="fs-4">Regista</th>
+                    <th class="fs-4">Attori principali</th>
+                    <th class="fs-4">Is Millennial?</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,12 +48,26 @@ require_once './db.php';
                 for ($i = 0; $i < count($movies); $i++) {
                 ?>
                     <tr>
-                        <td><?= $movies[$i]->title ?></td>
-                        <td><?= $movies[$i]->year ?></td>
+                        <td><strong style="color: blue"><?= $movies[$i]->title ?></strong></td>
+                        <td style="color: orange"><?= $movies[$i]->year ?></td>
                         <td><?= $movies[$i]->genres->getGenres() ?></td>
                         <td><?= $movies[$i]->director ?></td>
                         <td><?= $movies[$i]->getStringFromArray() ?></td>
-                        <td><?= $movies[$i]->isMillennial ?></td>
+                        <td style=<?php 
+                            if($movies[$i]->isMillennial == 'Oh no') {
+                                ?>
+                                
+                                "color:red">
+                                <?php
+                            } else {
+                                ?>
+                                
+                                "color:green">
+                                <?php
+                            }
+                            ?>
+                            <?= $movies[$i]->isMillennial ?>
+                        </td>
 
                     </tr>
                 <?php
