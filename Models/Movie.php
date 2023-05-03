@@ -16,8 +16,14 @@ class Movie {
         $this->actors = $actors;
 
 
-        if($year < 1981 || $year > 1999) {
+        if($year >= 1981 && $year <= 1999) {
             $this->isMillennial = true;
+        }
+
+        if($this->isMillennial == true) {
+            $this->isMillennial = 'Ok';
+        } else {
+            $this->isMillennial = 'Oh no';
         }
     }
 
