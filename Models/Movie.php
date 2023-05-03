@@ -22,7 +22,7 @@ class Movie {
     }
 
     public function getStringFromArray() {
-
+        return implode(', ', $this->actors);
     }
 
 
