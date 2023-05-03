@@ -30,7 +30,7 @@ require_once './db.php';
     include './Partials/header.php';
     ?>
 
-    <div class="container pt-5 pb-3 position-relative" style="margin-top: 50px; height: calc(100vh - 50px)">
+    <div class="container pt-5 pb-3 position-relative" style="margin-top: 80px; height: calc(100vh - 80px)">
         <h1>Movies</h1>
         <table class="table">
             <thead>
@@ -74,9 +74,3 @@ require_once './db.php';
 </body>
 
 </html>
-
-<!-- 
-Bonus 2:
-Creare un layout completo per stampare a schermo una lista di movies.
-Facciamo attenzione all’organizzazione del codice, suddividendolo in appositi file e cartelle. Possiamo ad esempio organizzare il codice
-- organizzando il layout dividendo la struttura ed i contenuti in file e parziali dedicati. -->
