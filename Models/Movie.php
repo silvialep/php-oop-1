@@ -8,7 +8,7 @@ class Movie {
     public $actors;
     public $isMillennial = false;
 
-    function __construct(string $title, int $year, array $genres, string $director, array $actors) {
+    function __construct(string $title, int $year, Genres $genres, string $director, array $actors) {
         $this->title = $title;
         $this->year = $year;
         $this->genres = $genres;
@@ -22,7 +22,7 @@ class Movie {
     }
 
     public function getStringFromArray() {
-        
+
     }
 
 
